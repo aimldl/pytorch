@@ -4,6 +4,12 @@
 
 
 
+```bash
+$ python -c "import torch; print(torch.__version__)"
+1.4.0
+$
+```
+
 ### PyTorch Domain Libraries
 
 * torchvision
