@@ -172,11 +172,10 @@ The reason why gcc is necessary is to compile source codes such as `Index.h`. A 
 First, install `gcc72`. 
 
 ```bash
-$ sudo yum-config-manager --enable epel
 $ sudo yum install -y gcc72 gcc72-c++
 ```
 
-For details, refer to [Installing g++ 5 on Amazon Linux](https://stackoverflow.com/questions/38188896/installing-g-5-on-amazon-linux) and [enable EPEL repositories for an EC2 instance](https://aws.amazon.com/premiumsupport/knowledge-center/ec2-enable-epel/?nc1=h_ls).
+For details, refer to [Installing g++ 5 on Amazon Linux](https://stackoverflow.com/questions/38188896/installing-g-5-on-amazon-linux).
 
 Secondly, change the file name of `gcc72` to `gcc`.
 
@@ -311,9 +310,14 @@ $
 >
 > c. Clone the AerialDetection repository.
 >
+> ```bash
+> $ git clone https://github.com/dingjiansw101/AerialDetection.git
+> ```
+>
 > d. Compile cuda extensions.
 >
 > ```bash
+> $ cd AerialDetection
 > $ ./compile.sh
 > ```
 >
