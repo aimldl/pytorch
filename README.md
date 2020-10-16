@@ -2,7 +2,9 @@
 
 # PyTorch
 
+PyTorch is a popular machine learning framework primarily developed by Facebook's AI Research lab. 
 
+* Homepage: https://pytorch.org/
 
 ```bash
 $ python -c "import torch; print(torch.__version__)"

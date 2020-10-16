@@ -1,3 +1,4 @@
+* Rev.1: 2020-10-16 (Fri)
 * Draft: 2020-10-07 (Wed)
 
 # How to Initialize Amazon SageMaker for AerialDetection
@@ -8,7 +9,72 @@ Currently, the default SageMaker is not suitable to run AerialDetection because 
 
 ## Commands to initialize SageMaker
 
+### Run a script `initialize_amazon_sagemaker`
+
+Run a Bash script [bash_scripts/initialize_amazon_sagemaker](bash_scripts/initialize_amazon_sagemaker) to initialize SageMaker for AerialDetection. 
+
+```bash
+$ chmod +x initialize_amazon_sagemaker
+$ ./initialize_amazon_sagemaker
+```
+
+After the initialization, you must be in the `pytorch_p36` virtual environment.
+
+```bash
+(base) [ec2-user@ip-123-45-67-89 SageMaker]$ source activate pytorch_p36
+(pytorch_p36) [ec2-user@ip-123-45-67-89 SageMaker]$ 
+```
+
+Notice `(base)` has been changed to `(pytorch_p36)`.
+
+This script is explained in the following sections more in detail. 
+
+#### Get your AWS credentials ready
+
+At the end of this script, the following message shows up.
+
+```bash
+  ...
+Enter the credentials below
+AWS Access Key ID [None]: 
+```
+
+Enter all the information for config & credentials. You may copy and paste the access key ID and press `Enter`.  The `Access Key ID` and `Secret Access Key` are changed to a series of aesterisk `*` . In the above example, `Region name` is `ap-northeast-2`, but enter the region name for your SageMaker instance. The output format is `json`.
+
+```bash
+AWS Access Key ID [None]: ********************
+AWS Secret Access Key [None]: ****************************************
+Default region name [ap-northeast-2]: ap-northeast-2
+Default output format [None]: json
+(base) [ec2-user@ip-123-45-67-89 SageMaker]$ 
+```
+
+If you don't have your AWS credentials ready, you may exit this part and enter the information later.
+
+```bash
+AWS Access Key ID [****************G7GU]: ^C
+(base) [ec2-user@ip-123-45-67-89 SageMaker]$ 
+```
+
+To enter the credentials, run
+
+```bash
+$ aws configure
+```
+
+You may fix the information in the credentials by running the above command. For example, the typo `ap-notrheast-2` may be fixed to `ap-northeast-2` as follows.
+
+```bash
+$ aws configure
+AWS Access Key ID [****************X9YZ]: 
+AWS Secret Access Key [****************AbCd]: 
+Default region name [ap-notrheast-2]: ap-northeast-2
+Default output format [json]: 
+```
+
 ### Summary
+
+The content of the script `initialize_amazon_sagemaker` is below.
 
 ```bash
 echo "Install AerialDetection"
