@@ -1,5 +1,14 @@
-```bash
+* Draft: 2020-10-21 (Wed)
 
+# Install the Baseline Aerial Detection for Ubuntu
+
+## Reference
+
+* [[힐링]Baseline Aerial Detection 설치 for Ubuntu](https://dacon.io/competitions/official/235644/codeshare/1710?page=1&dtype=recent&ptype=pub)
+
+
+
+```bash
 $ cd /home/ec2-user/SageMaker/AerialDetection/DOTA_devkit
 $ python
 Python 3.6.10 |Anaconda, Inc.| (default, Jan  7 2020, 21:14:29) 
