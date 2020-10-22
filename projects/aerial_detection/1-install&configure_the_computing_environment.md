@@ -1,6 +1,16 @@
+* Rev.1: 2020-10-22 (Thu)
 * Draft: 2020-10-03 (Sat)
 
 # Install & Configure the Computing Environment
+
+## References
+
+* [AerialDetection](https://github.com/dacon-ai/AerialDetection)/[INSTALL.md](https://github.com/dacon-ai/AerialDetection/blob/master/INSTALL.md)
+  * This is the main tutorial I've used.
+
+* [[힐링]Baseline Aerial Detection 설치 for Ubuntu](https://dacon.io/competitions/official/235644/codeshare/1710?page=1&dtype=recent&ptype=pub)
+  * I found this later article writtein in Korean.
+  * I keep this in case I may reference it in the future.
 
 ## Summary
 
@@ -33,8 +43,6 @@ pip install -r requirements.txt
 python setup.py develop
 # or "pip install -e ."
 ```
-
-[AerialDetection](https://github.com/dacon-ai/AerialDetection)/[INSTALL.md](https://github.com/dacon-ai/AerialDetection/blob/master/INSTALL.md)
 
 > ### Requirements
 >

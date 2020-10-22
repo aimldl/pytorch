@@ -4,7 +4,7 @@
 
 ## Reference
 
-* [[힐링]Baseline Aerial Detection 설치 for Ubuntu](https://dacon.io/competitions/official/235644/codeshare/1710?page=1&dtype=recent&ptype=pub)
+* 
 
 
 

@@ -32,8 +32,6 @@ First, make a directory `dota1_1024` under `data`.
 $ python DOTA_devkit/prepare_dota1.py --srcpath data/dota --dstpath data/dota1_1024
 ```
 
-
-
 Checking the available disk space.
 
 The DOTA dataset has 6,555 items totaling 21.3GB.
