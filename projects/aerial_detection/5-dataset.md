@@ -9,3 +9,13 @@
 
 https://dacon.io/competitions/official/235644/data/
 
+### Transform the dataset to the COCO format
+
+https://github.com/dacon-ai/AerialDetection
+
+```bash
+mkdir dacon
+cd dacon
+git clone https://github.com/dacon-ai/AerialDetection.git
+```
+
