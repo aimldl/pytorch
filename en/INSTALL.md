@@ -51,28 +51,29 @@ pytorch/pytorch                       latest                     6a2d656bcf94   
 $
 ```
 
-To run the image, run
+To run the image, use the `docker run` command.
 
 ```bash
 $ docker run -it pytorch/pytorch bash
 root@8b185ecaa66e:/workspace# 
 ```
 
-Python does exists
+Check to see if the PyTorch package exists in the container.
 
 ```bash
 root@8b185ecaa66e:/workspace# python
-Python 3.7.7 (default, May  7 2020, 21:25:33) 
+Python 3.8.8 (default, Feb 24 2021, 21:46:12) 
 [GCC 7.3.0] :: Anaconda, Inc. on linux
 Type "help", "copyright", "credits" or "license" for more information.
 >>> import torch
 >>> 
 ```
 
-but CUDA seems not available.
+Of course, `import torch` does not spit any error.
+
+However `nvidia-smi` is not available.
 
 ```bash
->>> exit()
 root@8b185ecaa66e:/workspace# nvidia-smi
 bash: nvidia-smi: command not found
 root@8b185ecaa66e:/workspace# 

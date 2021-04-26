@@ -1,8 +1,9 @@
+* Rev.1: 2021-04-26 (Mon)
 * Draft: 2020-10-03 (Sat)
 
 # PyTorch
 
-PyTorch is a popular machine learning framework primarily developed by Facebook's AI Research lab. 
+PyTorch is a popular machine learning framework primarily developed by Facebook's AI Research lab. It is becoming so popular that PyTorch is becoming a de-facto standard for Academia over-dominating the stronghold of TensorFlow. 
 
 * Homepage: https://pytorch.org/
 
