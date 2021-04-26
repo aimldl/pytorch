@@ -8,7 +8,32 @@
 
 The official PyTorch image will not used because it lacks some essential commands such as `nvidia-smi`, `wget` and so on.
 
-Create an Amazon EC2 instance and ssh to the created instance.
+Create an Amazon EC2 instance with appropriate number of GPUs.
+
+For details of the instance types, refer to [Amazon EC2 Instance Types](https://aws.amazon.com/ec2/instance-types/?nc1=h_ls) > [Accelerated Computing](https://aws.amazon.com/ec2/instance-types/?nc1=h_ls#Accelerated_Computing) for GPU-enabled instances.
+
+- P4, P3, P2, Inf1, G4dn, G4ad, G3, F1
+
+Some more details of P4 and P3 are below.
+
+P4
+
+|   Instance   | GPUs | vCPUs | Mem(GiB) |  Network Bandwidth   | GPUDirect RDMA | GPU Peer to Peer |      Storage      | EBS Bandwidth |
+| :----------: | :--: | :---: | :------: | :------------------: | :------------: | :--------------: | :---------------: | :-----------: |
+| p4d.24xlarge |  8   |  96   |   1152   | 400 Gbps ENA and EFA |      Yes       | 600GB/s NVSwitch | 8 x 1 TB NVMe SSD |    19 Gbps    |
+
+P3
+
+| **Instance**  | **GPUs** | **vCPU** | **Mem (GiB)** | **GPU Mem (GiB)** | **GPU P2P** | **Storage (GB)** | **Dedicated EBS Bandwidth** | **Networking Performance** |
+| ------------- | -------- | -------- | ------------- | ----------------- | ----------- | ---------------- | --------------------------- | -------------------------- |
+| p3.2xlarge    | 1        | 8        | 61            | 16                | -           | EBS-Only         | 1.5 Gbps                    | Up to 10 Gigabit           |
+| p3.8xlarge    | 4        | 32       | 244           | 64                | NVLink      | EBS-Only         | 7 Gbps                      | 10 Gigabit                 |
+| p3.16xlarge   | 8        | 64       | 488           | 128               | NVLink      | EBS-Only         | 14 Gbps                     | 25 Gigabit                 |
+| p3dn.24xlarge | 8        | 96       | 768           | 256               | NVLink      | 2 x 900 NVMe SSD | 19 Gbps                     | 100 Gigabit                |
+
+## Go to the machine
+
+ssh to the created instance.
 
 ```bash
 (local) $ ./ssh-deep_learning_ami_ver42_1-0-p3_8xlarge-ec2_seoul

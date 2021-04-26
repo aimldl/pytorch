@@ -1,4 +1,5 @@
-##### aimldl/python3/packages/pytorch/ToRead.md
+* Rev.1: 2021-04-26 (Mon)
+* Draft: 2021-01-09 (Sat)
 
 # To-Read List
 The following list is not the full list in the PyTorch Tutorials, but a selected list. The following sections in PyTorch tutorials are omitted.
@@ -76,9 +77,7 @@ Note: The subsequent GAN tutorials are omitted.
 ### Parallel and Distributed Training
 * [Single-Machine Model Parallel Best Practices](https://pytorch.org/tutorials/intermediate/model_parallel_tutorial.html)
 * [(advanced) PyTorch 1.0 Distributed Trainer with Amazon AWS](https://pytorch.org/tutorials/beginner/aws_distributed_training_tutorial.html)
-
-* [Getting Started with Distributed Data Parallel](https://pytorch.org/tutorials/intermediate/ddp_tutorial.html)
 * [Writing Distributed Applications with PyTorch](https://pytorch.org/tutorials/intermediate/dist_tuto.html)
 * [Getting Started with Distributed RPC Framework](https://pytorch.org/tutorials/intermediate/rpc_tutorial.html)
 
-
+* * - 

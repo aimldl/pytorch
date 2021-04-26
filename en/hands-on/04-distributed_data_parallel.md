@@ -4,15 +4,13 @@
 
 ## Overview
 
-* is multi-process and works for both single$ python pytorch_tutorials-distributed_data_parallelism-basic_use_case.py 
+* is multi-process and works for both single$ python pytorch_tutorials-distributed_data_parallelism.py 
   Requires at least 8 GPUs to run, but got 4.
   $- and multi- machine training.
-* This tutorial requires 8 GPUs. Otherwise you'll encounter:
+* This tutorial requires 8 GPUs. Otherwise you'll encounter the following error.
 
 ```bash
-$ python pytorch_tutorials-distributed_data_parall$ python pytorch_tutorials-distributed_data_parallelism-basic_use_case.py 
-Requires at least 8 GPUs to run, but got 4.
-$elism-basic_use_case.py 
+$ python pytorch_tutorials-distributed_data_parallelism.py
 Requires at least 8 GPUs to run, but got 4.
 $
 ```
@@ -94,32 +92,49 @@ $ cd 04-distributed_data_parallelism
 Copy and paste the source code
 
 ```bash
-$ nano pytorch_tutorials-distributed_data_parallelism-basic_use_case.py
+$ nano pytorch_tutorials-distributed_data_parallelism.py
 ```
 
 Run it on a machine or machines with 8 GPUs.
 
 ```bash
-$ python pytorch_tutorials-distributed_data_parallelism-basic_use_case.py
+$ python pytorch_tutorials-distributed_data_parallelism.py
+Running basic DDP example on rank 0.
+Running basic DDP example on rank 4.
+Running basic DDP example on rank 3.
+Running basic DDP example on rank 5.
+Running basic DDP example on rank 2.
+Running basic DDP example on rank 1.
+Running basic DDP example on rank 6.
+Running basic DDP example on rank 7.
+Running DDP checkpoint example on rank 1.
+Running DDP checkpoint example on rank 3.
+Running DDP checkpoint example on rank 5.
+Running DDP checkpoint example on rank 2.
+Running DDP checkpoint example on rank 7.
+Running DDP checkpoint example on rank 4.
+Running DDP checkpoint example on rank 0.
+Running DDP checkpoint example on rank 6.
+Running DDP with model parallel example on rank 2.
+Running DDP with model parallel example on rank 0.
+Running DDP with model parallel example on rank 1.
 $
 ```
 
 Otherwise, the following error occurs.
 
 ```bash
-$ python pytorch_tutorials-distributed_data_parallelism-basic_use_case.py 
+$ python pytorch_tutorials-distributed_data_parallelism.py 
 Requires at least 8 GPUs to run, but got 4.
 $
 ```
 
+## Appendix. Source code
 
-
-## Appendix. Source code - Basic Use Case
-
-This source code is available at [py_files/pytorch_tutorials-distributed_data_parallelism-basic_use_case.py](py_files/pytorch_tutorials-distributed_data_parallelism-basic_use_case.py). 
+This source code is available at [py_files/pytorch_tutorials-distributed_data_parallelism.py](py_files/pytorch_tutorials-distributed_data_parallelism.py). 
 
 ```python
-# pytorch_tutorials-distributed_data_parallelism-basic_use_case.py
+# pytorch_tutorials-distributed_data_parallelism.py
 
 # PyTorch Tutorials > GETTING STARTED WITH DISTRIBUTED DATA PARALLEL
 # https://pytorch.org/tutorials/intermediate/ddp_tutorial.html#comparison-between-dataparallel-and-distributeddataparallel
@@ -165,7 +180,7 @@ def cleanup():
 class ToyModel(nn.Module):
     def __init__(self):
         super(ToyModel, self).__init__()
-        self.net1 = nn.Linear(10, 10)
+        self.net1 = nn.Linear(10, 10)- Basic Use Case
         self.relu = nn.ReLU()
         self.net2 = nn.Linear(10, 5)
 
@@ -193,7 +208,7 @@ def demo_basic(rank, world_size):
 
 def run_demo(demo_fn, world_size):
     mp.spawn(demo_fn,
-             args=(world_size,),
+             args=(world_size,), - Basic Use Case
              nprocs=world_size,
              join=True)
 
@@ -222,7 +237,7 @@ def demo_checkpoint(rank, world_size):
     # configure map_location properly
     map_location = {'cuda:%d' % 0: 'cuda:%d' % rank}
     ddp_model.load_state_dict(
-        torch.load(CHECKPOINT_PATH, map_location=map_location))
+        torch.load(CHECKPOINT_PATH, map_location=map_location))- Basic Use Case
 
     optimizer.zero_grad()
     outputs = ddp_model(torch.randn(20, 10))
@@ -240,7 +255,7 @@ def demo_checkpoint(rank, world_size):
 
     cleanup()
     
-# Combine DDP with Model Parallelism
+# Combine DDP with Model Parallelism - Basic Use Case
 class ToyMpModel(nn.Module):
     def __init__(self, dev0, dev1):
         super(ToyMpModel, self).__init__()

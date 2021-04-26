@@ -1,3 +1,7 @@
+# Source: PyTorch > QUICKSTART
+#   https://pytorch.org/tutorials/beginner/basics/quickstart_tutorial.html
+# Refer to https://github.com/aimldl/pytorch/blob/main/en/hands-on/01-intro2pytorch-quickstart.md
+
 import torch
 from torch import nn
 from torch.utils.data import DataLoader
@@ -69,12 +73,12 @@ def train(dataloader, model, loss_fn, optimizer):
         # Compute prediction error
         pred = model(X)
         loss = loss_fn(pred, y)
-    
+
         # Backpropagation
         optimizer.zero_grad()
         loss.backward()
         optimizer.step()
-    
+
         if batch % 100 == 0:
             loss, current = loss.item(), batch * len(X)
             print(f"loss: {loss:>7f}  [{current:>5d}/{size:>5d}]")
@@ -92,7 +96,7 @@ def test(dataloader, model):
     test_loss /= size
     correct /= size
     print(f"Test Error: \n Accuracy: {(100*correct):>0.1f}%, Avg loss: {test_loss:>8f} \n")
-    
+
 epochs = 5
 for t in range(epochs):
     print(f"Epoch {t+1}\n-------------------------------")
