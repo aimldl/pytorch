@@ -1,5 +1,6 @@
 import torch
 from torch import nn
+from torchvision import datasets
 
 # Define model
 class NeuralNetwork(nn.Module):
@@ -19,6 +20,16 @@ class NeuralNetwork(nn.Module):
         x = self.flatten(x)
         logits = self.linear_relu_stack(x)
         return logits
+
+# Download test data from open datasets.
+test_data = datasets.FashionMNIST(
+    root="data",
+    train=False,
+    download=True,
+    transform=ToTensor(),
+)
+
+# Error occurs in the following lines without the above lines which are taken from the first file.
 
 model = NeuralNetwork()
 model.load_state_dict(torch.load("model.pth"))
