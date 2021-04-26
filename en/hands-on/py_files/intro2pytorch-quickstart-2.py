@@ -2,6 +2,8 @@
 #   https://pytorch.org/tutorials/beginner/basics/quickstart_tutorial.html
 # Refer to https://github.com/aimldl/pytorch/blob/main/en/hands-on/01-intro2pytorch-quickstart.md
 
+# The first part
+#   is added to make the second part run without errors.
 import torch
 from torch import nn
 from torchvision import datasets
@@ -34,7 +36,8 @@ test_data = datasets.FashionMNIST(
     transform=ToTensor(),
 )
 
-# Error occurs in the following lines without the above lines which are taken from the first file.
+# The second part:
+#   Error occurs in the following lines without the above lines which are taken from the first file.
 
 model = NeuralNetwork()
 model.load_state_dict(torch.load("model.pth"))
