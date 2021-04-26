@@ -1,6 +1,11 @@
+# Source: PyTorch > QUICKSTART
+#   https://pytorch.org/tutorials/beginner/basics/quickstart_tutorial.html
+# Refer to https://github.com/aimldl/pytorch/blob/main/en/hands-on/01-intro2pytorch-quickstart.md
+
 import torch
 from torch import nn
 from torchvision import datasets
+from torchvision.transforms import ToTensor
 
 # Define model
 class NeuralNetwork(nn.Module):
