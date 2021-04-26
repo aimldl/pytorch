@@ -80,6 +80,14 @@ root@8b185ecaa66e:/workspace#
 >>>
 ```
 
+`wget` does not exist, too.
+
+```bash
+root@8b185ecaa66e:/workspace# wget https://github.com/aimldl/pytorch/blob/main/en/hands-on/py_files/intro2pytorch-quickstart-1.py
+bash: wget: command not found
+root@8b185ecaa66e:/workspace#
+```
+
 Exiting the `pytorch/pytorch` container...
 
 ```bash
@@ -87,4 +95,40 @@ root@8b185ecaa66e:/workspace# exit
 exit
 $
 ```
+
+Let's delete the official image.
+
+The `docker rmi` command may not work with the following error.
+
+```bash
+$ docker rmi pytorch/pytorch
+Error response from daemon: conflict: unable to remove repository reference "pytorch/pytorch" (must force) - container 61784122a0bb is using its referenced image 5ffed6c83695
+$
+```
+
+Stop and remove the container first before removing the image.
+
+```bash
+$ docker ps -a | grep pytorch
+61784122a0bb   pytorch/pytorch                      "/bin/bash"              23 minutes ago      Exited (127) About a minute ago                        recursing_wilbur
+$ docker rm recursing_wilbur
+recursing_wilbur
+$
+```
+
+Note the container has already been stopped at the time of exiting the container.
+
+Now remove the image with the same command which failed previously.
+
+```bash
+$ docker rmi pytorch/pytorch
+Untagged: pytorch/pytorch:latest
+Untagged: pytorch/pytorch@sha256:9ebb176339b25a2d155e6f127c5948968b3f61e5f720c4598ef79cf450db8bfe
+Deleted: sha256:5ffed6c836956ef474d369d9dfe7b3d52263e93b51c7a864b068f98e02ea8c51
+  ...
+Deleted: sha256:837d6facb613e572926fbfe8cd7171ddf5919c1454cf4d5b4e78f3d2a7729000
+$
+```
+
+
 

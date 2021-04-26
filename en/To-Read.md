@@ -4,7 +4,7 @@
 The following list is not the full list in the PyTorch Tutorials, but a selected list. The following sections in PyTorch tutorials are omitted.
 * Image
   * The tutorials on the GAN family.
-* Named Tensor (experimental)
+* Named Tensor (experimental)https://github.com/aimldl/pytorch/blob/main/en/hands-on/py_files/intro2pytorch-quickstart-1.py
 * Reinforcement Learning
 * Deploying PyTorch Models in Production
 * Parallel and Distributed Training
