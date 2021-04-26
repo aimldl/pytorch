@@ -14,6 +14,8 @@
     * categorize many documents or tutorials into different topics
     * and describe them briefly.
 
+<img src='images/parallel_and_distributed_training.png'>
+
 ## Introduction
 
 * Most of the existing documents are written for either DDP or RPC.
