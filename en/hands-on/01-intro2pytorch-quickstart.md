@@ -1,12 +1,14 @@
+* Draft: 2021-04-26 (Mon)
 
+# [QUICKSTART](https://pytorch.org/tutorials/beginner/basics/quickstart_tutorial.html)
+* This document explain a quick way to test PyTorch.
+* Basically, the source code in [PyTorch > QUICKSTART](https://pytorch.org/tutorials/beginner/basics/quickstart_tutorial.html) is executed.
 
+There are two files:
+1. [py_files/intro2pytorch-quickstart-1.py](py_files/intro2pytorch-quickstart-1.py)
+2. [py_files/intro2pytorch-quickstart-2.py](py_files/intro2pytorch-quickstart-2.py)
 
-
-[QUICKSTART](https://pytorch.org/tutorials/beginner/basics/quickstart_tutorial.html)
-
-
-
-[py_files/intro2pytorch-quickstart-1.py](py_files/intro2pytorch-quickstart-1.py)
+## 1. [py_files/intro2pytorch-quickstart-1.py](py_files/intro2pytorch-quickstart-1.py)
 
 ```python
 import torch
@@ -91,7 +93,7 @@ def train(dataloader, model, loss_fn, optimizer):
             print(f"loss: {loss:>7f}  [{current:>5d}/{size:>5d}]")
             
 def test(dataloader, model):
-    size = len(dataloader.dataset)
+    size = len(d[py_files/intro2pytorch-quickstart-1.py](py_files/intro2pytorch-quickstart-1.py)ataloader.dataset)
     model.eval()
     test_loss, correct = 0, 0
     with torch.no_grad():
@@ -115,9 +117,12 @@ torch.save(model.state_dict(), "model.pth")
 print("Saved PyTorch Model State to model.pth")
 ```
 
-
-
-Load the previously saved model and make predictions for small test samples.
+## [py_files/intro2pytorch-quickstart-2.py](py_files/intro2pytorch-quickstart-2.py)
+* Load the previously saved model and make predictions for small test samples.
+* There are two parts in the second file.
+  * The second part shown below is the core.
+  * Running the second part alone results in errors.
+  * The first part is added to make this code work without the  errors.
 
 ```python
 model = NeuralNetwork()
@@ -144,11 +149,8 @@ with torch.no_grad():
     print(f'Predicted: "{predicted}", Actual: "{actual}"')
 ```
 
-
-
 The expected output is
 
 ```bash
 Predicted: "Ankle boot", Actual: "Ankle boot"
 ```
-
