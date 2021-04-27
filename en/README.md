@@ -3,7 +3,7 @@
 
 # PyTorch
 
-PyTorch is a popular machine learning framework primarily developed by Facebook's AI Research lab. It is becoming so popular that PyTorch is becoming a de-facto standard for Academia over-dominating the stronghold of TensorFlow. 
+PyTorch is a deep learning framework that provides Tensors and Dynamic neural networks in Python. It is easier to use than TensorFlow and supports GPU acceleration easily. It is becoming so popular that PyTorch is becoming a de-facto standard for Academia over-dominating the stronghold of TensorFlow. It is primarily developed by Facebook's AI Research lab. 
 
 * Homepage: https://pytorch.org/
 

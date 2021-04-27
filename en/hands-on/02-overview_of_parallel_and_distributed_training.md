@@ -147,8 +147,9 @@
       * scales across machine boundaries
 * **Tutorials**
   * Starter example
-    * [DDP notes](https://pytorch.org/docs/stable/notes/ddp.html)
+    * [Distributed Data Parallel](https://pytorch.org/docs/stable/notes/ddp.html)
       * with brief descriptions of DDP design and implementation
+      * This is refereed to as "DDP notes" in the overview tutorial.
   * **Single-machine multi-GPU tutorial**
     * [Getting Started with Distributed Data Parallel](https://pytorch.org/tutorials/intermediate/ddp_tutorial.html), Shen Li (Joe Zhu)
       * explains some common problems with DDP training  including:

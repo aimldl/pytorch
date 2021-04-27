@@ -75,9 +75,6 @@ Note: The subsequent GAN tutorials are omitted.
     * nn module
 
 ### Parallel and Distributed Training
-* [Single-Machine Model Parallel Best Practices](https://pytorch.org/tutorials/intermediate/model_parallel_tutorial.html)
 * [(advanced) PyTorch 1.0 Distributed Trainer with Amazon AWS](https://pytorch.org/tutorials/beginner/aws_distributed_training_tutorial.html)
 * [Writing Distributed Applications with PyTorch](https://pytorch.org/tutorials/intermediate/dist_tuto.html)
-* [Getting Started with Distributed RPC Framework](https://pytorch.org/tutorials/intermediate/rpc_tutorial.html)
 
-* * - 
